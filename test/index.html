@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css"/>
+    <script type="text/javascript" src="../source/javascripts/lib/requirejs/require.js"></script>
+
+    <script type="text/javascript">
+        require.config({
+            baseUrl:'..',
+            paths: {
+                // RequireJS Plugins
+                use: 'source/javascripts/lib/requirejs/plugins/use',
+                cs: 'source/javascripts/lib/requirejs/plugins/cs',
+                text: 'source/javascripts/lib/requirejs/plugins/text',
+
+                // 3rd party libs
+                backbone: 'source/javascripts/lib/backbone/backbone',
+                underscore: 'source/javascripts/lib/underscore/underscore',
+                jquery: 'source/javascripts/lib/jquery/jquery-1.7.2',
+                // Open-Goal-Tracker stuff.
+                app: 'app/scripts/',
+                templates: 'app/scripts/templates',
+
+                // Test-only stuff.
+                mocha: 'node_modules/mocha/mocha',
+                chai: 'test/lib/chai',
+                sinon: 'test/lib/sinon_shim',
+                sinon_orig: 'node_modules/sinon/lib/sinon',
+                sinon_spy: 'node_modules/sinon/lib/sinon/spy'
+                },
+            use: {
+                sinon: {
+                    attach: "sinon"
+                },
+                sinon_spy: {
+                    deps: ['use!sinon'],
+                    attach: "spy"
+                },
+                expect: {
+                    attach: "expect"
+                }
+            }
+        });
+
+        require(['require', 'mocha'], function(require){
+            
+            mocha.setup('bdd');
+            require([
+                'cs!test/contact'
+                // 'cs!test/unit/collections/user_goal',
+                // 'cs!test/unit/views/user_goal_list',
+                // 'cs!test/unit/routers/user_goal'
+                ], function(module){
+                console.log("module: ", module);
+                mocha.run();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="mocha"></div>
+</body>
+</html>

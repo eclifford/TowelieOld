@@ -1,0 +1,7 @@
+--title      "AKQA Documentation"
+--private
+--quiet
+--output-dir ./doc
+./source/javascripts
+-
+
