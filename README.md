@@ -1,9 +1,8 @@
 # Towlelie JS Architecture
 
 Install dependencies
-'npm install'
+  npm install
 
 Run mocha tests
-'mocha' 
-or
-'make test'
+  mocha 
+

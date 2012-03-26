@@ -7,10 +7,8 @@ build:
 		install
 
 test: 
-	@/usr/bin/env node \
-		$(DEBUG) \
-		./bin/test \
-		--list
+	@./node_modules/mocha/bin/mocha \
+	--ui bdd
 
 watch: 
 	@./node_modules/mocha/bin/mocha \
