@@ -4,6 +4,7 @@
 # @version 1.0.0
 define [], ->
   debug = true
+  
   debug: (on_) ->
     debug = (if on_ then true else false)
 
