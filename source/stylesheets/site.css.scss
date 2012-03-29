@@ -21,6 +21,7 @@ $side-gutter-width: $gutter-width;
 body {
   font-family: $font-family;
   color: $font-color; 
+  background-color: #000;
 }
 
 a {
@@ -49,3 +50,64 @@ a {
 .contact-container dl { margin:0; float:left; font-size:14px; }
 .contact-container dt, .contact-container dd { margin:0; float:left; }
 .contact-container dt { width:50px; clear:left; }
+
+.image {
+  float: left;
+  opacity: .7;
+}
+
+.active {
+  opacity: 1;
+}
+
+#container {
+  width: 750px;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
+#tray {
+  width: 750px;
+}
+
+#detailPanel {
+  width: 750px;
+  height: 200px;
+  background-color: #333;
+}
+
+#controlPanel {
+  width: 750px;
+  height: 30px;
+  background-color: #333;
+}
+
+#logPanel {
+  width: 750px;
+  background-color: #383838;
+  color: #04a41b;
+  padding: 10px;
+  height: 200px;
+  overflow-y: scroll;
+}
+#overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 999;
+}
+
+#overlay .content {
+  display: block;
+  margin: auto auto auto auto;
+  text-align: left;
+  cursor: auto;
+  position: relative;
+  padding: 20px;
+  background: #333;
+  color: #000;
+  width: 610px;
+}

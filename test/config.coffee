@@ -12,7 +12,8 @@ unless window?
       underscore: "source/javascripts/lib/underscore/underscore"
       app: "source/javascripts/"
       templates: "source/javascripts/templates"
-      #jquery: 'source/javascripts/lib/jquery/jquery-1.7.2'
+      core: "source/javascripts/lib/akqa/akqa.core"
+      logger: "source/javascripts/modules/logger"
 
   window = global
   # Ensure document is defined for backbone.

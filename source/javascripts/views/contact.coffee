@@ -8,13 +8,14 @@
 # @author Eric Clifford
 #
 define [
+ "fascade",
  "views/directory",
  "underscore", 
  "backbone", 
  "jquery", 
  "text!templates/contact.html", 
  "text!templates/contactEdit.html"], 
- (directory, _, Backbone, $, template, contactEditTemplate) ->
+ (Fascade, directory, _, Backbone, $, template, contactEditTemplate) ->
 
   # This is a description of the view
   ContactView = Backbone.View.extend(
@@ -22,6 +23,8 @@ define [
     className: "contact-container"
     template: _.template(template)
     editTemplate: _.template(contactEditTemplate)
+
+    initialize: ->
 
     # Render the View
     render: ->

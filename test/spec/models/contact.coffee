@@ -18,7 +18,7 @@ module ["require", "mocha", "chai", "sinon", "cs!source/javascripts/models/conta
 
     it "should be null", ->
       contact = new ContactModel
-      contact.should.equal(null)
+      contact.should.not.equal(null)
 
     it "to be called once", ->
       contact = new ContactModel

@@ -5,5 +5,5 @@ if typeof define isnt "function"
 else
   module = define
 
-module ["cs!test/spec/plugins/jquery.plugin"], () ->
+module ["cs!test/spec/lib/akqa.core","cs!test/spec/plugins/jquery.plugin"], () ->
   # Do tests...

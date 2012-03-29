@@ -22,6 +22,9 @@
                 // Open-Goal-Tracker stuff.
                 app: 'app/scripts/',
                 templates: 'app/scripts/templates',
+                core: "source/javascripts/lib/akqa/akqa.core",
+                logger: "source/javascripts/modules/logger",
+
 
                 // Test-only stuff.
                 mocha: 'node_modules/mocha/mocha',
@@ -49,9 +52,6 @@
             mocha.setup('bdd');
             require([
                 'cs!test/tests'
-                // 'cs!test/unit/collections/user_goal',
-                // 'cs!test/unit/views/user_goal_list',
-                // 'cs!test/unit/routers/user_goal'
                 ], function(module){
                 mocha.run();
             });
