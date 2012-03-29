@@ -3,8 +3,9 @@
 # @author Eric Clifford
 #
 require.config
-  # baseUrl:'.',
+  #baseUrl:'.',
   paths:
+    cs: "lib/requirejs/plugins/cs"
     core: "lib/akqa/akqa.core"
     permissions: "lib/akqa/akqa.permissions"
     fascade: "lib/akqa/akqa.fascade"
@@ -13,7 +14,7 @@ require.config
     underscore: "lib/underscore/underscore"
     text: "lib/requirejs/plugins/text"
     detailPanel: "views/detailPanel"
-    logger: "modules/akqa.logger"
+    logger: "modules/logger"
 
 
 # The starting point of the application

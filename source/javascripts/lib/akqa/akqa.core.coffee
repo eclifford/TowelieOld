@@ -75,11 +75,17 @@ define ['logger'], (Logger) ->
     else
       Logger.log 3, "Module " + moduleId + " Start: FAILED: no instance"
 
+  #
+  #
+  #
   startAll: ->
     for id of modules
       modules[id].init()
       Logger.log 1, "Module " + id + " Start: Succeeded"
 
+  #
+  #
+  #
   stopAll: ->
     for id of modules
       modules[id].destroy()

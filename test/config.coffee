@@ -12,6 +12,8 @@ unless window?
       underscore: "source/javascripts/lib/underscore/underscore"
       app: "source/javascripts/"
       templates: "source/javascripts/templates"
+      core: "source/javascripts/lib/akqa/akqa.core"
+      logger: "source/javascripts/modules/logger"
 
   # Ensure document is defined for backbone.
   global.document = require("jsdom").jsdom()

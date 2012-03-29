@@ -19,7 +19,7 @@
                 backbone: 'source/javascripts/lib/backbone/backbone',
                 underscore: 'source/javascripts/lib/underscore/underscore',
                 jquery: 'source/javascripts/lib/jquery/jquery-1.7.2',
-                // Open-Goal-Tracker stuff.
+  
                 app: 'app/scripts/',
                 templates: 'app/scripts/templates',
 
@@ -49,9 +49,6 @@
             mocha.setup('bdd');
             require([
                 'cs!test/tests'
-                // 'cs!test/unit/collections/user_goal',
-                // 'cs!test/unit/views/user_goal_list',
-                // 'cs!test/unit/routers/user_goal'
                 ], function(module){
                 console.log("module: ", module);
                 mocha.run();
