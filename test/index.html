@@ -28,7 +28,9 @@
                 chai: 'test/lib/chai',
                 sinon: 'test/lib/sinon_shim',
                 sinon_orig: 'node_modules/sinon/lib/sinon',
-                sinon_spy: 'node_modules/sinon/lib/sinon/spy'
+                sinon_spy: 'node_modules/sinon/lib/sinon/spy',
+                core: "source/javascripts/lib/akqa/akqa.core",
+                logger: "source/javascripts/modules/logger"
                 },
             use: {
                 sinon: {
@@ -48,7 +50,7 @@
             
             mocha.setup('bdd');
             require([
-                'cs!test/tests'
+                'cs!test/spec/lib/akqa.core'
                 ], function(module){
                 console.log("module: ", module);
                 mocha.run();

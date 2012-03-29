@@ -1,6 +1,6 @@
 if typeof define isnt "function"
   requirejs = require("requirejs")
-  require "./config"
+  require __dirname + "/../../config"
   module = requirejs
 else
   module = define

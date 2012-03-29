@@ -1,5 +1,6 @@
 REPORTER ?= dot
 UNITTESTS ?= $(shell find test/unit -name "*.coffee" -type f)
+TESTS = $(shell find test/spec -name "*.coffee" -type f)
 DEBUG ?= 
 
 build:
@@ -7,12 +8,10 @@ build:
 		install
 
 test: 
-	@./node_modules/mocha/bin/mocha \
-	--ui bdd
+	mocha $(TESTS) --ui bdd
 
 watch: 
-	@./node_modules/mocha/bin/mocha \
-	--watch
+	mocha $(TESTS) --ui bdd --watch
 
 doc:
 	@./node_modules/codo/bin/codo \
