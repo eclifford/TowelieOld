@@ -3,52 +3,9 @@
 <head>
     <link rel="stylesheet" href="../node_modules/mocha/mocha.css"/>
     <script type="text/javascript" src="../source/javascripts/lib/requirejs/require.js"></script>
-
+    <script type="text/javascript" src="config.js"></script>
     <script type="text/javascript">
-        require.config({
-            baseUrl:'..',
-            paths: {
-                // RequireJS Plugins
-                use: 'source/javascripts/lib/requirejs/plugins/use',
-                cs: 'source/javascripts/lib/requirejs/plugins/cs',
-                order: 'source/javascripts/lib/requirejs/plugins/order',
-                text: 'source/javascripts/lib/requirejs/plugins/text',
-
-                // 3rd party libs
-                backbone: 'source/javascripts/lib/backbone/backbone',
-                underscore: 'source/javascripts/lib/underscore/underscore',
-                jquery: 'source/javascripts/lib/jquery/jquery-1.7.2',
-
-                // Open-Goal-Tracker stuff.
-                app: 'app/scripts/',
-                templates: 'app/scripts/templates',
-                core: "source/javascripts/lib/akqa/akqa.core",
-                logger: "source/javascripts/modules/logger",
-
-
-                // Test-only stuff.
-                mocha: 'node_modules/mocha/mocha',
-                chai: 'test/lib/chai',
-                sinon: 'test/lib/sinon_shim',
-                sinon_orig: 'node_modules/sinon/lib/sinon',
-                sinon_spy: 'node_modules/sinon/lib/sinon/spy'
-                },
-            use: {
-                sinon: {
-                    attach: "sinon"
-                },
-                sinon_spy: {
-                    deps: ['use!sinon'],
-                    attach: "spy"
-                },
-                expect: {
-                    attach: "expect"
-                }
-            }
-        });
-
         require(['require','mocha'], function(require){
-            
             mocha.setup('bdd');
             require([
                 'cs!test/tests'
