@@ -1,21 +1,25 @@
-console.log "THis is the plugin"
-(($) ->
-  window.PluginObjectName = class PluginObjectName
-    constructor: () ->
+define ["jquery"], ($) ->
 
-    init: (options, elem) ->
-      self = @
-      self.elem = elem
-      self.$elem = $(elem)
+  window = global unless window?
+  jQuery = $ unless jQuery?
+ 
+  (($) ->
+    window.PluginObjectName = class PluginObjectName
+      constructor: () ->
 
-      self.options = $.extend {}, $.fn.pluginName.defaults, options
+      init: (options, elem) ->
+        self = @
+        self.elem = elem
+        self.$elem = $(elem)
 
-  $.fn.pluginName = (options) ->
-    @each ->
-      pluginObjectName = new PluginObjectName()
-      pluginObjectName.init options, this
+        self.options = $.extend {}, $.fn.pluginName.defaults, options
 
-  $.fn.pluginName.defaults = 
-    some: "options"
-    also: "others"
-)($)
+    $.fn.pluginName = (options) ->
+      @each ->
+        pluginObjectName = new PluginObjectName()
+        pluginObjectName.init options, this
+
+    $.fn.pluginName.defaults = 
+      some: "options"
+      also: "others"
+  )(jQuery)

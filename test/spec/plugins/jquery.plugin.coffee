@@ -5,8 +5,11 @@ if typeof define isnt "function"
 else
   module = define
 
-module ["require", "mocha", "chai", "sinon", "jquery", "order!cs!source/javascripts/plugins/jquery.plugin"], (require, mocha, chai, sinon, $) ->
+module ["require", "mocha", "chai", "sinon", "jquery", "cs!source/javascripts/plugins/jquery.plugin"], (require, mocha, chai, sinon, $) ->
   should = chai.should()
+
+  console.log "This is a test."
+
   describe 'Chainable', ->
     describe '$("div.element").pluginName()', ->
       it 'should return $("div.element") so that other jQuery methods can be chained also called upon', ->
