@@ -33,7 +33,10 @@ baseConfig = {
     app: "source/javascripts/",
     templates: "source/javascripts/templates",
     core: "source/javascripts/lib/akqa/akqa.core",
-    logger: "source/javascripts/modules/logger"
+    logger: "source/javascripts/modules/logger",
+    contact: "source/javascripts/views/contact",
+    fascade: "source/javascripts/lib/akqa/akqa.fascade",
+    permissions: "source/javascripts/lib/akqa/akqa.permissions"
   }
 };
 
@@ -72,4 +75,8 @@ if (typeof window !== "undefined" && window !== null) {
 } else {
   requirejs = require("requirejs");
   requirejs.config(extend(baseConfig, nodeConfig));
+}
+
+if (typeof module !== "undefined" && module !== null) {
+  module.exports = requirejs;
 }

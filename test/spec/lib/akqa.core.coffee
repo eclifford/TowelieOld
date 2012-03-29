@@ -1,12 +1,11 @@
 if typeof define isnt "function"
-  requirejs = require("requirejs")
-  require "./config"
-  module = requirejs
+  module = require("requirejs")
 else
   module = define
 
-module ["require", "mocha", "chai", "sinon", "cs!core"], (require, mocha, chai, sinon, Core) ->
+requirejs ["mocha", "chai", "sinon", "cs!core"], (mocha, chai, sinon, Core) ->
   should = chai.should()
+  console.log should
 
   describe "AKQA.Core", ->
     it "test should call subscriber", ->
@@ -14,4 +13,8 @@ module ["require", "mocha", "chai", "sinon", "cs!core"], (require, mocha, chai, 
       Core.subscribe('testChannel', spy)
       Core.publish('testChannel')
       spy.calledOnce.should.equal(true)
+
+    it "should not be null", ->
+      Core.should.not.equal(null)
+
 

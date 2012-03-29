@@ -2,7 +2,7 @@
 #
 # @author Eric Clifford
 #
-define ["underscore", "backbone", "./../views/contact"], (_, Backbone)->
+define ["underscore", "backbone", "cs!contact"], (_, Backbone)->
   Contact = Backbone.Model.extend(
 
     ###

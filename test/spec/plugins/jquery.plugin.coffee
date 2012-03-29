@@ -1,7 +1,5 @@
 if typeof define isnt "function"
-  requirejs = require("requirejs")
-  require "./config"
-  module = requirejs
+  module = require("requirejs")
 else
   module = define
 

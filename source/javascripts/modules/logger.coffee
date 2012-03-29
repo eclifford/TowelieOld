@@ -2,7 +2,14 @@
 #
 # @author Eric Clifford
 # @version 1.0.0
-define [], ->
+((root, factory) ->
+  if typeof exports is "object"
+    module.exports = factory()
+  else if typeof define is "function" and define.amd
+    define [], factory
+  else
+    root.returnExports = factory(root.b)
+) this, () ->
   debug = true
   
   debug: (on_) ->
