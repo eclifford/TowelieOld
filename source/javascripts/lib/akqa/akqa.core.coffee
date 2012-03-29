@@ -1,11 +1,8 @@
-((root, factory) ->
-  if typeof exports is "object"
-    module.exports = factory(require("../../modules/logger"))
-  else if typeof define is "function" and define.amd
-    define ["cs!logger"], factory
-  else
-    root.returnExports = factory(root.b)
-) this, (Logger) ->
+# AKQA Core
+#
+# @author Eric Clifford
+#
+define ["cs!logger"], (Logger) ->
 
   modules = {}
   channels = {}

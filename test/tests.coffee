@@ -1,9 +1,10 @@
-# if typeof define isnt "function"
-#   requirejs = require("requirejs")
-#   require "./config"
-#   module = requirejs
-# else
-#   module = define
+if typeof define isnt "function"
+  module = require("./config")
+else
+  module = define
 
-require ["cs!test/spec/lib/akqa.core"], () ->
+module ["cs!test/spec/lib/akqa.core", 
+        "cs!test/spec/plugins/jquery.plugin",
+        "cs!test/spec/models/contact"], () ->
+
   # Do tests...

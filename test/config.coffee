@@ -14,6 +14,12 @@ unless window?
       templates: "source/javascripts/templates"
       core: "source/javascripts/lib/akqa/akqa.core"
       logger: "source/javascripts/modules/logger"
+      contact: "source/javascripts/views/contact"
+      fascade: "source/javascripts/lib/akqa/akqa.fascade"
+      permissions: "source/javascripts/lib/akqa/akqa.permissions"
 
+  window = global
   # Ensure document is defined for backbone.
-  global.document = require("jsdom").jsdom()
+  window.document = require("jsdom").jsdom()
+
+  module.exports = requirejs

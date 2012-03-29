@@ -2,7 +2,7 @@
 #
 # @author Eric Clifford
 #
-define ["core", "permissions" ], (core, permissions) ->
+define ["cs!core", "cs!permissions" ], (core, permissions) ->
   facade = facade or {}
   facade.subscribe = (subscriber, channel, callback) ->
     core.subscribe channel, callback  if permissions.validate(subscriber, channel)
