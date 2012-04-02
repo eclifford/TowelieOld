@@ -3,7 +3,7 @@ if typeof define isnt "function"
 else
   module = define
 
-module ["require", "mocha", "chai", "sinon", "jquery", "cs!source/javascripts/plugins/jquery.plugin"], (require, mocha, chai, sinon, $) ->
+module ["require", "mocha", "chai", "sinon", "jquery", "cs!javascripts/plugins/jquery.plugin"], (require, mocha, chai, sinon, $) ->
   should = chai.should()
 
   describe 'Chainable', ->

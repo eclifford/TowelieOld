@@ -3,7 +3,7 @@ if typeof define isnt "function"
 else
   module = define
 
-module ["require", "mocha", "chai", "sinon", "cs!source/javascripts/models/contact"], (require, mocha, chai, sinon, ContactModel) ->
+module ["require", "mocha", "chai", "sinon", "cs!javascripts/models/contact"], (require, mocha, chai, sinon, ContactModel) ->
   should = chai.should()
   describe "Contact Model", ->
     it "should have correct default values", ->

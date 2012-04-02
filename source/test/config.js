@@ -24,19 +24,19 @@ extend = function() {
 baseConfig = {
   baseUrl: ".",
   paths: {
-    cs:           "source/javascripts/lib/requirejs/plugins/cs",
-    order:        "source/javascripts/lib/requirejs/plugins/order",
-    text:         "source/javascripts/lib/requirejs/plugins/text",
-    requirejs:    "source/javascripts/lib/requirejs/require",
-    backbone:     "source/javascripts/lib/backbone/backbone",
-    underscore:   "source/javascripts/lib/underscore/underscore",
-    app:          "source/javascripts/",
-    templates:    "source/javascripts/templates",
-    core:         "source/javascripts/lib/akqa/akqa.core",
-    logger:       "source/javascripts/modules/logger",
-    contact:      "source/javascripts/views/contact",
-    fascade:      "source/javascripts/lib/akqa/akqa.fascade",
-    permissions:  "source/javascripts/lib/akqa/akqa.permissions"
+    cs:           "javascripts/lib/requirejs/plugins/cs",
+    order:        "javascripts/lib/requirejs/plugins/order",
+    text:         "javascripts/lib/requirejs/plugins/text",
+    requirejs:    "javascripts/lib/requirejs/require",
+    backbone:     "javascripts/lib/backbone/backbone",
+    underscore:   "javascripts/lib/underscore/underscore",
+    app:          "javascripts/",
+    templates:    "javascripts/templates",
+    core:         "javascripts/lib/akqa/akqa.core",
+    logger:       "javascripts/modules/logger",
+    contact:      "javascripts/views/contact",
+    fascade:      "javascripts/lib/akqa/akqa.fascade",
+    permissions:  "javascripts/lib/akqa/akqa.permissions"
   }
 };
 
@@ -47,9 +47,9 @@ nodeConfig = {
 browserConfig = {
   baseUrl: "..",
   paths: {
-    use:          "source/javascripts/lib/requirejs/plugins/use",
-    backbone:     "source/javascripts/lib/backbone/backbone",
-    jquery:       "source/javascripts/lib/jquery/jquery-1.7.2",
+    use:          "javascripts/lib/requirejs/plugins/use",
+    backbone:     "javascripts/lib/backbone/backbone",
+    jquery:       "javascripts/lib/jquery/jquery-1.7.2",
     mocha:        "node_modules/mocha/mocha",
     chai:         "test/lib/chai",
     sinon:        "test/lib/sinon_shim",
